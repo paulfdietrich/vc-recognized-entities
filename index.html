@@ -1135,7 +1135,7 @@ using the generic `ExternalEntityList` type.
     </section>
 
     <section>
-        <h3>OutputValidation</h3>
+        <h3>Output Validation</h3>
 
         <p>
 An <dfn class="export">output validation</dfn> object describes a constraint
@@ -1157,21 +1157,22 @@ MUST conform to <strong>every</strong> output validation object in the array.
             <tr>
               <td>type</td>
               <td>
-The `type` property MUST be present and MUST identify the kind of output
-validation. The `type` value determines the processing rules for the output
-validation object and the meaning of its `id` property.
+The `type` property MUST be present and identifies the processing rules
+for the output validation object.
               </td>
             </tr>
             <tr>
               <td>id</td>
               <td>
-A [=URL=] identifying the validation resource.
+The `id` [=property=] is REQUIRED. The value is defined in
+<a data-cite="VC-DATA-MODEL#identifiers">Section 4.4: Identifiers</a>
+and identifies the validation resource.
               </td>
             </tr>
             <tr>
               <td>digestMultibase</td>
               <td>
-A cryptographic digest used to verify the integrity of the resource identified
+If present, a cryptographic digest used to verify the integrity of the resource identified
 by `id`. The value is defined in
 <a data-cite="VC-DATA-MODEL#integrity-of-related-resources">Section 5.3:
 Integrity of Related Resources</a> of the [[[VC-DATA-MODEL]]] specification.
